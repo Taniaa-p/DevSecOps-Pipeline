@@ -38,7 +38,7 @@ jobs:
       uses: docker/setup-buildx-action@v3
 
     - name: Build Docker Image
-      run: docker build -t myapp .
+      run: docker build -t myapp -f Dockerfile .
 
     - name: Scan Docker Image
       run: trivy image myapp
